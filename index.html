@@ -1,0 +1,384 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Terra Nova 01: a 2-day Parsons Valley trek to Mukurthi Hut in the Nilgiris, by Mvmnt Tribe × Gypsy Souls. ~20 km, max 2,512 m, ₹5,700 per person.">
+<meta property="og:title" content="Terra Nova 01: Parsons Valley Trek">
+<meta property="og:description" content="Terra Nova 01: a 2-day Parsons Valley trek to Mukurthi Hut in the Nilgiris, by Mvmnt Tribe × Gypsy Souls. ~20 km, max 2,512 m, ₹5,700 per person.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#0F1814">
+<style>body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Terra Nova 01: Parsons Valley</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;800;900&family=Archivo:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap">
+<style>
+/* Layout: one long trail. A contour-lined hero with the ridge profile, then sections stacked like waypoints down a single left rail. */
+:root{
+  --bg:#F1F2EC; --surface:#E5E8E0; --ink:#16211C; --muted:#56635C; --line:#C9CFC5;
+  --accent:#B8651F; --accent-ink:#FFFFFF; --forest:#24443A; --mist:#DCE2DA;
+  --display:"Big Shoulders Display","Oswald","Arial Narrow",Impact,sans-serif;
+  --body:"Archivo","Helvetica Neue",Arial,sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0F1814; --surface:#16231D; --ink:#E7ECE5; --muted:#9AA89F; --line:#2A3B33;
+  --accent:#E08A3C; --accent-ink:#14100B; --forest:#1B3129; --mist:#20322A; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0F1814; --surface:#16231D; --ink:#E7ECE5; --muted:#9AA89F; --line:#2A3B33;
+  --accent:#E08A3C; --accent-ink:#14100B; --forest:#1B3129; --mist:#20322A; color-scheme:dark}
+
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.wrap{max-width:1080px;margin:0 auto;padding-inline:20px}
+.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+h1,h2,h3{font-family:var(--display);text-transform:uppercase;line-height:.95;margin:0;text-wrap:balance;letter-spacing:.01em}
+h2{font-size:clamp(32px,4.4vw,48px);font-weight:800;overflow-wrap:anywhere}
+h3{font-size:24px;font-weight:800}
+p{margin:0}
+
+/* top bar */
+.bar{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;padding-block:20px;border-bottom:1px solid var(--line)}
+.lockup{display:flex;align-items:center;gap:14px;font-family:var(--display);font-weight:900;font-size:22px;letter-spacing:.06em;text-transform:uppercase}
+.lockup .x{font-family:var(--mono);font-weight:400;font-size:14px;color:var(--accent)}
+.btn{display:inline-flex;align-items:center;gap:10px;background:var(--accent);color:var(--accent-ink);font-family:var(--display);font-weight:800;font-size:18px;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;padding:12px 22px;border-radius:2px;transition:transform .15s ease}
+.btn:hover{transform:translateY(-2px)}
+.btn.ghost{background:transparent;color:var(--ink);border:1.5px solid var(--ink)}
+
+/* hero */
+.hero{position:relative;overflow:hidden;border-bottom:1px solid var(--line)}
+.hero svg.contours{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.hero .wrap{position:relative;padding-block:56px 0}
+.hero h1{font-size:clamp(64px,13vw,168px);font-weight:900;letter-spacing:-.005em}
+.hero h1 span{display:block;color:var(--accent)}
+.series{display:inline-flex;align-items:stretch;margin-bottom:18px;border:1.5px solid var(--ink);border-radius:2px;overflow:hidden}
+.series .tn{font-family:var(--display);font-weight:900;font-size:26px;letter-spacing:.14em;text-transform:uppercase;padding:6px 14px;background:var(--ink);color:var(--bg)}
+.series .ed{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;padding:0 14px;display:flex;align-items:center}
+.hero .eyebrow{margin-bottom:6px}
+.newland{font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-top:4px}
+.hero .lede{max-width:56ch;margin-top:24px;font-size:18px;color:var(--muted)}
+.hero .lede strong{color:var(--ink);font-weight:600}
+.hero .ctas{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.profile{display:block;width:100%;height:auto;margin-top:40px}
+.profile .ridge{fill:var(--forest)}
+.profile .ridge-line{fill:none;stroke:var(--accent);stroke-width:2.5}
+.profile text{font-family:var(--mono);font-size:13px;fill:var(--ink)}
+.profile .tick{stroke:var(--ink);stroke-width:1}
+
+/* stat strip */
+.stats{display:grid;grid-template-columns:repeat(6,1fr);border-bottom:1px solid var(--line)}
+.stat{padding:22px 16px;border-right:1px solid var(--line);min-width:0}
+.stat:last-child{border-right:0}
+.stat .v{font-family:var(--display);font-weight:800;font-size:34px;line-height:1;text-transform:uppercase;font-variant-numeric:tabular-nums}
+.stat .v small{font-size:18px;margin-left:2px}
+.stat .k{margin-top:8px}
+.stat.tough .v{color:var(--accent)}
+@media (max-width:860px){.stats{grid-template-columns:repeat(3,1fr)}.stat:nth-child(3){border-right:0}.stat:nth-child(-n+3){border-bottom:1px solid var(--line)}}
+@media (max-width:480px){.stats{grid-template-columns:repeat(2,1fr)}.stat{border-right:1px solid var(--line)!important;border-bottom:1px solid var(--line)}.stat:nth-child(2n){border-right:0!important}}
+
+/* sections */
+section.block{display:grid;grid-template-columns:220px 1fr;gap:32px;padding-block:64px;border-bottom:1px solid var(--line)}
+section.block > header{min-width:0}
+section.block > header .eyebrow{margin-bottom:12px}
+section.block > .body{min-width:0}
+@media (max-width:760px){section.block{grid-template-columns:1fr;gap:20px;padding-block:48px}}
+
+.intro p{font-size:clamp(20px,2.4vw,26px);line-height:1.45;max-width:34ch}
+.highlights{display:grid;grid-template-columns:repeat(2,1fr);gap:0;margin-top:36px;list-style:none;padding:0;border-top:1px solid var(--line)}
+.highlights li{padding:16px 16px 16px 0;border-bottom:1px solid var(--line);display:flex;gap:14px;align-items:baseline}
+.highlights li::before{content:"";flex:none;width:9px;height:9px;background:var(--accent);transform:rotate(45deg) translateY(-2px)}
+@media (max-width:560px){.highlights{grid-template-columns:1fr}}
+
+/* itinerary */
+.days{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+@media (max-width:860px){.days{grid-template-columns:1fr}}
+.day{background:var(--surface);padding:28px;border-radius:3px;min-width:0}
+.day .tag{display:flex;justify-content:space-between;gap:12px;align-items:baseline;margin-bottom:6px}
+.day .tag b{font-family:var(--mono);font-weight:600;color:var(--accent);font-size:13px;letter-spacing:.1em}
+.day h3{font-size:32px;margin-bottom:22px}
+.steps{list-style:none;margin:0;padding:0;counter-reset:s}
+.steps li{position:relative;padding:0 0 18px 34px;counter-increment:s}
+.steps li::before{content:counter(s,decimal-leading-zero);position:absolute;left:0;top:2px;font-family:var(--mono);font-size:12px;color:var(--muted)}
+.steps li::after{content:"";position:absolute;left:9px;top:24px;bottom:4px;width:1px;background:var(--line)}
+.steps li:last-child{padding-bottom:0}
+.steps li:last-child::after{display:none}
+.steps li strong{font-weight:600}
+.note{margin-top:22px;font-size:14px;color:var(--muted);max-width:70ch}
+
+/* callout */
+.callout{background:var(--forest);color:#EEF2EC;padding:40px;border-radius:3px;display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:start}
+.callout .big{font-family:var(--display);font-weight:900;font-size:clamp(44px,6vw,72px);line-height:.9;text-transform:uppercase;color:var(--accent)}
+.callout p{max-width:60ch}
+.callout p + p{margin-top:12px;color:#C3CEC6}
+@media (max-width:640px){.callout{grid-template-columns:1fr;padding:28px}}
+
+/* lists */
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+@media (max-width:700px){.cols{grid-template-columns:1fr}}
+.list{list-style:none;margin:16px 0 0;padding:0}
+.list li{padding:11px 0;border-bottom:1px solid var(--line);display:flex;gap:12px}
+.list li .m{flex:none;font-family:var(--mono);font-weight:600;width:14px}
+.list.in .m{color:var(--accent)}
+.list.out .m{color:var(--muted)}
+.list.out li{color:var(--muted)}
+
+.carry{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+@media (max-width:860px){.carry{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:440px){.carry{grid-template-columns:1fr}}
+.carry > div{min-width:0}
+.carry h3{font-size:20px;padding-bottom:10px;border-bottom:2px solid var(--ink)}
+
+/* cancellation table */
+.policy{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
+.policy th,.policy td{text-align:left;padding:16px 12px 16px 0;border-bottom:1px solid var(--line);vertical-align:top}
+.policy th{font-family:var(--mono);font-weight:400;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.policy td:first-child{font-weight:600;white-space:nowrap}
+.policy .loss{font-family:var(--display);font-weight:800;font-size:22px;text-transform:uppercase}
+.tbl{overflow-x:auto}
+
+/* price + register */
+.register{display:grid;grid-template-columns:1.1fr 1fr;gap:0;border:1.5px solid var(--ink);border-radius:3px;overflow:hidden}
+@media (max-width:760px){.register{grid-template-columns:1fr}}
+.register .price{padding:36px;background:var(--accent);color:var(--accent-ink)}
+.register .price .amt{font-family:var(--display);font-weight:900;font-size:clamp(72px,10vw,120px);line-height:.9;font-variant-numeric:tabular-nums}
+.register .price .per{font-family:var(--mono);font-size:13px;letter-spacing:.12em;text-transform:uppercase;margin-top:8px}
+.register .price ul{margin:24px 0 0;padding:0;list-style:none;display:grid;gap:6px}
+.register .price .btn{background:var(--accent-ink);color:var(--accent);margin-top:28px}
+.register .contact{padding:36px;display:grid;gap:22px;align-content:start;min-width:0}
+.crow{display:grid;gap:4px;min-width:0}
+.crow .val{display:flex;align-items:center;gap:10px;flex-wrap:wrap;font-family:var(--mono);font-size:15px;word-break:break-all}
+.copy{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;background:none;border:1px solid var(--line);color:var(--muted);padding:4px 8px;border-radius:2px;cursor:pointer}
+.copy:hover{border-color:var(--ink);color:var(--ink)}
+
+footer{padding-block:40px 56px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center}
+footer .lockup{font-size:18px}
+
+@media (prefers-reduced-motion:no-preference){
+  .hero h1{animation:rise .8s cubic-bezier(.2,.7,.2,1) both}
+  .profile .ridge-line{stroke-dasharray:2400;stroke-dashoffset:0;animation:draw 2.2s ease-out both}
+  @keyframes rise{from{transform:translateY(18px)}to{transform:none}}
+  @keyframes draw{from{stroke-dashoffset:2400}to{stroke-dashoffset:0}}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav class="bar" aria-label="Collaboration">
+    <div class="lockup">TERRA NOVA <span class="x">/</span> MVMNT TRIBE <span class="x">×</span> GYPSY SOULS</div>
+    <a class="btn" href="https://forms.gle/w8JSQW1LuhicHEmL8" target="_blank" rel="noopener">Register</a>
+  </nav>
+</div>
+
+<header class="hero">
+  <svg class="contours" viewBox="0 0 1200 700" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <g fill="none" stroke="var(--line)" stroke-width="1">
+      <path d="M-50 520 C 200 420, 360 470, 560 360 S 900 300, 1250 380"/>
+      <path d="M-50 560 C 220 470, 380 510, 580 400 S 920 350, 1250 420"/>
+      <path d="M-50 600 C 240 520, 400 550, 600 440 S 940 400, 1250 460"/>
+      <path d="M-50 480 C 180 380, 340 430, 540 320 S 880 250, 1250 340"/>
+      <path d="M-50 440 C 160 340, 320 390, 520 280 S 860 200, 1250 300"/>
+      <path d="M-50 400 C 140 300, 300 350, 500 240 S 840 150, 1250 260"/>
+      <path d="M 820 180 C 870 150, 960 150, 1000 185 S 940 240, 880 230 S 790 210, 820 180Z"/>
+      <path d="M 850 185 C 880 168, 940 168, 965 190 S 925 220, 890 214 S 835 200, 850 185Z"/>
+    </g>
+  </svg>
+  <div class="wrap">
+    <div class="series"><span class="tn">Terra Nova</span><span class="ed">Edition 01</span></div>
+    <p class="eyebrow">A Mvmnt Tribe trek series · Nilgiris, Tamil Nadu · 2 Days / 1 Night</p>
+    <h1>Parsons Valley <span>Trek</span></h1>
+    <p class="lede"><strong>A wild escape into the heart of the Nilgiris.</strong> A challenging trek through mist-covered grasslands and ancient shola forest to the remote Mukurthi Hut. Built for people who want more than an ordinary trail.</p>
+    <div class="ctas">
+      <a class="btn" href="https://forms.gle/w8JSQW1LuhicHEmL8" target="_blank" rel="noopener">Register now →</a>
+      <a class="btn ghost" href="#itinerary">See the itinerary</a>
+    </div>
+    <svg class="profile" viewBox="0 0 1040 180" role="img" aria-label="Out-and-back route from Parsons Valley base to Mukurthi Hut, maximum elevation about 2,512 metres">
+      <path class="ridge" d="M0 180 L0 150 C 80 140, 130 120, 200 118 S 300 96, 360 84 S 450 62, 520 40 S 610 70, 680 84 S 790 104, 860 118 S 960 140, 1040 150 L1040 180Z" opacity=".9"/>
+      <path class="ridge-line" d="M0 150 C 80 140, 130 120, 200 118 S 300 96, 360 84 S 450 62, 520 40 S 610 70, 680 84 S 790 104, 860 118 S 960 140, 1040 150"/>
+      <line class="tick" x1="520" y1="40" x2="520" y2="12"/>
+      <circle cx="520" cy="40" r="5" fill="var(--accent)"/>
+      <text x="532" y="22">MUKURTHI HUT · ~2,512 M</text>
+      <text x="6" y="132">PARSONS VALLEY BASE</text>
+      <text x="1034" y="132" text-anchor="end">BACK TO BASE · 20 KM</text>
+    </svg>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="stats">
+    <div class="stat"><div class="v">2D<small>/1N</small></div><div class="eyebrow k">Duration</div></div>
+    <div class="stat"><div class="v">~20<small>km</small></div><div class="eyebrow k">Round trip</div></div>
+    <div class="stat"><div class="v">~8<small>hrs</small></div><div class="eyebrow k">On the trail</div></div>
+    <div class="stat"><div class="v">2,512<small>m</small></div><div class="eyebrow k">Max elevation</div></div>
+    <div class="stat tough"><div class="v">Tough</div><div class="eyebrow k">Difficulty</div></div>
+    <div class="stat"><div class="v">₹5,700</div><div class="eyebrow k">Per person</div></div>
+  </div>
+
+  <section class="block intro">
+    <header><p class="eyebrow">The series</p><h2>New ground. Same tribe.</h2></header>
+    <div class="body">
+      <p style="margin-bottom:20px"><strong>Terra Nova</strong> is Latin for "new land". It's Mvmnt Tribe's trek series: every edition takes the tribe somewhere new. Edition 01 starts in the Nilgiris.</p>
+      <p>A day of raw adventure and quiet moments in the Nilgiris. Walk through rolling grasslands and old shola forest, and leave the city behind for a while.</p>
+      <ul class="highlights">
+        <li>Government-approved trek</li>
+        <li>20 km round trip through the Nilgiris</li>
+        <li>Ancient shola forests and rolling grasslands</li>
+        <li>A visit to the remote Mukurthi Hut</li>
+        <li>Misty mountain landscapes and scenic trails</li>
+        <li>The biodiversity of the Western Ghats</li>
+        <li>Time away from city life</li>
+        <li>A trek with the Mvmnt Tribe community</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="block" id="itinerary">
+    <header><p class="eyebrow">Itinerary</p><h2>Two days</h2></header>
+    <div class="body">
+      <div class="days">
+        <article class="day">
+          <div class="tag"><span class="eyebrow">Day 1</span><b>COIMBATORE → OOTY</b></div>
+          <h3>The climb up</h3>
+          <ol class="steps">
+            <li>Meet at the pickup point in Coimbatore and drive up to Ooty through the winding ghat roads.</li>
+            <li>Stop for breakfast or refreshments on the way if needed.</li>
+            <li>Check in at the homestay and meet the rest of the group.</li>
+            <li><strong>Pre-trek briefing</strong> on the trail, safety and fitness.</li>
+            <li>Dinner, then an early night. Overnight stay in Ooty.</li>
+          </ol>
+        </article>
+        <article class="day">
+          <div class="tag"><span class="eyebrow">Day 2</span><b>PARSONS VALLEY</b></div>
+          <h3>Trek day</h3>
+          <ol class="steps">
+            <li>Early start. Drive from Ooty to the Parsons Valley trek base.</li>
+            <li>Reporting and forest entry formalities. Meet the authorised forest guide.</li>
+            <li>Trek through shola forest and grassland to <strong>Mukurthi Hut</strong>, with hydration and rest breaks along the way.</li>
+            <li>Packed lunch at a permitted spot, depending on trail conditions.</li>
+            <li>Return by the same route and report back at the base.</li>
+            <li>Drive back to Coimbatore, arriving at night depending on conditions.</li>
+          </ol>
+        </article>
+      </div>
+      <p class="note">Dates and the final reporting and return times will be confirmed before departure. The plan depends on forest department permission, authorised guide arrangements, weather and trail conditions.</p>
+    </div>
+  </section>
+
+  <section class="block">
+    <header><p class="eyebrow">Before you sign up</p><h2>Read this</h2></header>
+    <div class="body">
+      <div class="callout">
+        <div class="big">Fitness<br>matters</div>
+        <div>
+          <p>This is a tough trek: around 20 km and 8 hours of walking in one day. It is not recommended as a first trek for anyone without good walking endurance.</p>
+          <p>Leave no trace. Carry back all your personal waste and treat the forest with respect.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block">
+    <header><p class="eyebrow">The package</p><h2>What's covered</h2></header>
+    <div class="body cols">
+      <div>
+        <h3>Included</h3>
+        <ul class="list in">
+          <li><span class="m">+</span>Government-approved trek permit</li>
+          <li><span class="m">+</span>Trek coordination and guidance</li>
+          <li><span class="m">+</span>Trek insurance within the route</li>
+          <li><span class="m">+</span>Day 2 lunch, provided by the forest department</li>
+          <li><span class="m">+</span>Transport to and from Coimbatore</li>
+          <li><span class="m">+</span>Homestay, 3 or 4 sharing</li>
+          <li><span class="m">+</span>Cap and a birds pamphlet</li>
+          <li><span class="m">+</span>Basic first-aid support</li>
+          <li><span class="m">+</span>Trip coordination throughout</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Not included</h3>
+        <ul class="list out">
+          <li><span class="m">–</span>Personal expenses</li>
+          <li><span class="m">–</span>Meals not in the plan</li>
+          <li><span class="m">–</span>Snacks, drinks and refreshments</li>
+          <li><span class="m">–</span>Activities outside the itinerary</li>
+          <li><span class="m">–</span>Travel or medical insurance</li>
+          <li><span class="m">–</span>Anything not listed under included</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="block">
+    <header><p class="eyebrow">Packing list</p><h2>What to carry</h2></header>
+    <div class="body carry">
+      <div><h3>Wear</h3><ul class="list"><li>Sturdy trekking shoes</li><li>Quick-dry clothing</li><li>Fleece or warm jacket</li><li>Rain jacket or poncho</li></ul></div>
+      <div><h3>Fuel</h3><ul class="list"><li>Small daypack</li><li>Reusable water bottles</li><li>Electrolytes</li><li>High-energy snacks</li></ul></div>
+      <div><h3>Protect</h3><ul class="list"><li>Cap and sunglasses</li><li>Sunscreen</li><li>Insect repellent</li><li>Personal medication</li></ul></div>
+      <div><h3>Admin</h3><ul class="list"><li>Photo ID for registration</li><li>Waterproof phone pouch</li><li>A small bag to carry back your waste</li></ul></div>
+    </div>
+  </section>
+
+  <section class="block">
+    <header><p class="eyebrow">Policy</p><h2>Cancel&shy;lations</h2></header>
+    <div class="body">
+      <div class="tbl">
+        <table class="policy">
+          <thead><tr><th>When you cancel</th><th>What you lose</th><th>Refund</th></tr></thead>
+          <tbody>
+            <tr><td>More than 30 days before</td><td class="loss">Deposit</td><td>Remaining balance refunded</td></tr>
+            <tr><td>15 to 30 days before</td><td class="loss">50%</td><td>Half the total trip cost refunded</td></tr>
+            <tr><td>Less than 15 days before</td><td class="loss">100%</td><td>No refund</td></tr>
+            <tr><td>No-show</td><td class="loss">100%</td><td>No refund</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">Refunds are based on the date you tell us you're cancelling, not the date you booked.</p>
+    </div>
+  </section>
+
+  <section class="block" id="register">
+    <header><p class="eyebrow">Join the tribe</p><h2>Save your spot</h2></header>
+    <div class="body">
+      <div class="register">
+        <div class="price">
+          <div class="amt">₹5,700</div>
+          <div class="per">Per person · all inclusions above</div>
+          <ul><li>Transport from Coimbatore</li><li>Homestay in Ooty</li><li>Permit, guide and insurance on the route</li></ul>
+          <a class="btn" href="https://forms.gle/w8JSQW1LuhicHEmL8" target="_blank" rel="noopener">Register →</a>
+        </div>
+        <div class="contact">
+          <div class="crow"><span class="eyebrow">Call or WhatsApp</span>
+            <div class="val"><span>+91 88703 57473</span><button class="copy" type="button" data-copy="+918870357473">Copy</button></div>
+            <div class="val"><span>+91 88700 24298</span><button class="copy" type="button" data-copy="+918870024298">Copy</button></div>
+          </div>
+          <div class="crow"><span class="eyebrow">Email</span>
+            <div class="val"><span>gypsysoulscbe@gmail.com</span><button class="copy" type="button" data-copy="gypsysoulscbe@gmail.com">Copy</button></div>
+          </div>
+          <div class="crow"><span class="eyebrow">Website</span>
+            <div class="val"><a href="https://www.gypsysouls.in" target="_blank" rel="noopener">www.gypsysouls.in</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="lockup">TERRA NOVA 01 <span class="x">/</span> MVMNT TRIBE <span class="x">×</span> GYPSY SOULS</div>
+    <p class="eyebrow">Move better, train smarter and get stronger together</p>
+  </footer>
+</div>
+
+<script>
+document.querySelectorAll('.copy').forEach(function(b){
+  b.addEventListener('click',function(){
+    var t=b.getAttribute('data-copy');
+    var done=function(){b.textContent='Copied';setTimeout(function(){b.textContent='Copy'},1500)};
+    var fallback=function(){var s=b.previousElementSibling;var r=document.createRange();r.selectNodeContents(s);var sel=getSelection();sel.removeAllRanges();sel.addRange(r);b.textContent='Selected'};
+    try{navigator.clipboard.writeText(t).then(done,fallback)}catch(e){fallback()}
+  });
+});
+</script>
+</body>
+</html>
